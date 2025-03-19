@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog - Revamped</title>
+    <link rel="stylesheet" href="./blog.css">
+</head>
+<body>
+    <div class="header">IT Security and Health Safety</div>
+    <div class="container">
+        <div class="card-green">
+            <img src="./img/2345547 (1).png" alt="Security">
+            <br>
+            <a href="./Safety.html" class="btn btn-green">Health and Safety</a>
+        </div>
+        <div class="card-red">
+            <img src="./img/11651032.png" alt="Threat">
+            <br>
+            <a href="./Security.html" class="btn btn-red">Security Threats</a>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <p>&copy; 2025 My Blog. Davyd Tonkoshtan</p>
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
