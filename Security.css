@@ -1,0 +1,215 @@
+/* Основні стилі */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 1000;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 80px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: #0077cc;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+/* Стилі секцій */
+.container {
+    position: relative;
+    width: 1550px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+}
+
+.container1 { background-image: url(./img/virus.jpg); }
+.container2 { background-image: url(./img/trojan.jpg); }
+.container3 { background-image: url(./img/spyware.jpg); }
+.container4 { background-image: url(./img/Adware.png); }
+.container5 { background-image: url(./img/phising.png); }
+.container6 { background-image: url(./img/pharming.png); }
+
+/* Додаємо блюр лише на фон */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px);
+    z-index: 0;
+    transition: filter 0.4s ease-in-out;
+}
+
+/* При наведенні прибираємо блюр */
+.container:hover::before {
+    filter: blur(0);
+}
+
+/* Заголовки поверх зображень */
+.container h2 {
+    position: absolute;
+    color: rgb(231, 15, 15);
+    font-size: 4rem;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+/* Текст всередині секцій */
+.container p {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+/* Анімація при наведенні */
+.container:hover h2 {
+    opacity: 0;
+}
+
+.container:hover p {
+    opacity: 1;
+}
+
+.video {
+    position: relative;
+    width: 1550px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+}
+
+.video::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px);
+    z-index: 0;
+    transition: filter 0.4s ease-in-out;
+}
+
+/* При наведенні прибираємо блюр */
+.video:hover::before {
+    filter: blur(0);
+}
+
+.video :hover {
+    transform: scale(1.1);
+    margin-bottom: 60px;
+}
+
+/* Плавне зміщення інших фото */
+.container:hover {
+    transform: scale(1.1);
+    margin-bottom: 60px;
+}
+
+.container a {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.7);
+    top: 100px;
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.container:hover a {
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .container {
+        height: 250px;
+    }
+}
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
